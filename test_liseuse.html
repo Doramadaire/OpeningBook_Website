@@ -4,18 +4,18 @@
         <meta charset="utf-8" />
         <title>Liseuse	</title>
     </head>
-    <script language="Javascript">
-    	function test()
-    	{}
-    </script>
     <body>    
 		<p> Allez go!</p>
-		<img class='zoom' src='daisy.jpg' alt='Daisy!' align='middle' />
+		<img class='zoom' src='daisy.jpg' alt='Bouh!' align='middle' />
 		<script src="wheelzoom.js"></script>
 		<script>
 			wheelzoom(document.querySelector('img'));
 			document.querySelector('img').dispatchEvent( new CustomEven('wheelzoom.reset'));
 		</script>
-		<p><button id="reset" onClick="wheelzoom.reset()">regarde</button></p>		
+		<p>
+		<button type="button"
+onclick="document.querySelector('img').dispatchEvent(new CustomEvent('wheelzoom.reset'))">
+Reset zoom</button>
+</p>
     </body>
 </html>
